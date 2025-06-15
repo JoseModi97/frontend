@@ -36,7 +36,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - ```src/pages/```  app page UI components and logic
 - ```src/App.js``` app main layout
 - ```src/index.js``` application entry point
-- ```src/.env``` app configurations
+- ```.env``` app configurations
+
+## API Integration
+
+API requests are handled by **axios**. The base API path is configured in `.env` using the `REACT_APP_API_PATH` variable. `src/components/InjectAxios.js` sets up axios defaults and a response interceptor for handling authentication errors. A custom hook `useApi` wraps axios methods and automatically attaches the `Authorization` header when a user token exists.
 
 ### For more info
 See [RadSystems](https://radsystems.io/)
